@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-import autoprefixer from 'autoprefixer' // ✅ CORRECTO
+import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
-  base: './', // ✅ ESTA LÍNEA ES CLAVE PARA HOSTING
+  base: '/test/',
 
   plugins: [vue()],
 
@@ -103,12 +103,7 @@ export default defineConfig({
   },
 
   optimizeDeps: {
-    include: [
-      'vue',
-      'vue-router',
-      'pinia',
-      'axios'
-    ],
+    include: ['vue', 'vue-router', 'pinia', 'axios'],
     exclude: []
   },
 
